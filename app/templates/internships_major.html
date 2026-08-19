@@ -1,0 +1,259 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+<style>
+    /* Main Section - White Background */
+    .internship-section {
+        background-color: #ffffff;
+        padding: 160px 0 100px 0;
+        width: 100%;
+        min-height: 100vh;
+        color: #333;
+    }
+
+    .container-full {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    /* Top Title Header */
+    .heading-large {
+        font-size: 1.8rem;
+        font-weight: 800;
+        background: #f1f1f1; /* Light grey bar from minor pattern */
+        color: #000;
+        display: inline-block;
+        padding: 10px 25px;
+        margin-bottom: 25px;
+        border-radius: 4px;
+    }
+
+    .sub-heading {
+        font-weight: 700;
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+        color: #000;
+    }
+
+    .intro-text {
+        font-size: 1.05rem;
+        line-height: 1.6;
+        margin-bottom: 40px;
+        max-width: 1100px;
+    }
+
+    /* Green Category Banner */
+    .banner-green {
+        background-color: #006400;
+        color: #ffffff !important;
+        padding: 12px 20px;
+        font-weight: bold;
+        margin-bottom: 30px;
+        border-radius: 6px;
+        text-transform: uppercase;
+    }
+
+    /* Layout Pattern */
+    .program-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        margin-bottom: 70px;
+        align-items: flex-start;
+    }
+
+    /* Left Column: Peach Buttons */
+    .button-column {
+        flex: 1;
+        min-width: 320px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* Right Column: Minor Card Style (Green side-bar only) */
+    .eligibility-card {
+        flex: 1.2;
+        background: #ffffff;
+        padding: 40px;
+        border-radius: 12px;
+        min-width: 300px;
+        border: 1px solid #eeeeee; /* Light border */
+        border-left: 8px solid #006400; /* Matching Minor's accent bar */
+        box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+    }
+
+    .eligibility-card h3 {
+        margin-top: 0;
+        font-size: 2.2rem;
+        text-align: center;
+        margin-bottom: 25px;
+        color: #000;
+    }
+
+    .program-list {
+        list-style: none;
+        padding: 0;
+    }
+
+    .program-list li {
+        font-size: 1.15rem;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        color: #444;
+    }
+
+    .program-list li::before {
+        content: "➤";
+        color: #006400; /* Green arrow from minor pattern */
+        margin-right: 15px;
+        font-size: 0.9rem;
+    }
+
+    /* Peach Button Styling */
+    .btn-apply {
+        background-color: #ff9e80;
+        color: #000 !important;
+        padding: 25px;
+        text-align: center;
+        border-radius: 20px;
+        text-decoration: none;
+        font-weight: 800;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .btn-apply:hover {
+        transform: translateY(-5px);
+        background-color: #ff8a65;
+    }
+
+    .btn-title { display: block; font-size: 1.25rem; margin-bottom: 8px; }
+    .btn-link { display: block; text-decoration: underline; font-size: 0.95rem; font-weight: 500; }
+
+    /* Scroll Animation */
+    .reveal { opacity: 0; transform: translateY(30px); transition: 0.8s ease-out; }
+    .reveal.active { opacity: 1; transform: translateY(0); }
+</style>
+
+<div class="internship-section">
+    <div class="container-full">
+
+        <div class="animate__animated animate__fadeIn">
+            <h1 class="heading-large">LONG TERM INTERNSHIP PROGRAMMES (MAJOR)</h1>
+            <p class="sub-heading">Students & Internship Programs We Offer</p>
+            <p class="intro-text">
+                HAN-INTERN HUB provides Artificial Intelligence-based internship programs specially designed for students from multiple academic backgrounds.
+                Each program is customized so that students can apply AI tools directly to their own subject area.
+            </p>
+        </div>
+
+        <div class="reveal">
+            <div class="banner-green">1) FOR COMPUTER SCIENCE AND SCIENCE STUDENTS</div>
+            <div class="program-row">
+                <div class="button-column">
+                    <a href="{% url 'apply_internship' %}" class="btn-apply">
+                        <span class="btn-title">AI, Data Science & Digital Innovation Internship Program</span>
+                        <span class="btn-link">Apply-Here</span>
+                    </a>
+                    <a href="{% url 'apply_internship' %}" class="btn-apply">
+                        <span class="btn-title">Smart Computing & AI Internship Program</span>
+                        <span class="btn-link">Apply-Here</span>
+                    </a>
+                </div>
+                <div class="eligibility-card">
+                    <h3>Who Can Apply</h3>
+                    <ul class="program-list">
+                        <li>B.Sc Computer Science</li>
+                        <li>B.Sc Data Science</li>
+                        <li>B.Sc Artificial Intelligence</li>
+                        <li>BCA (Bachelor of Computer Applications)</li>
+                        <li>BCA Data Science</li>
+                        <li>B.Sc Animation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="reveal">
+            <div class="banner-green">2) FOR SCIENCE STUDENTS</div>
+            <div class="program-row">
+                <div class="button-column">
+                    <a href="{% url 'apply_internship' %}" class="btn-apply">
+                        <span class="btn-title">"Bioinformatics & AI Applications Internship Program"</span>
+                        <span class="btn-link">Apply-Here</span>
+                    </a>
+                    <a href="{% url 'apply_internship' %}" class="btn-apply">
+                        <span class="btn-title">Applied AI in Chemistry & Biological Sciences Internship</span>
+                        <span class="btn-link">Apply-Here</span>
+                    </a>
+                </div>
+                <div class="eligibility-card">
+                    <h3>Who Can Apply</h3>
+                    <ul class="program-list">
+                        <li>B.Sc (Chemistry)</li>
+                        <li>B.Sc (Microbiology)</li>
+                        <li>B.Sc (Fisheries)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="reveal">
+            <div class="banner-green">3) FOR COMMERCE AND MANAGEMENT STUDENTS</div>
+            <div class="program-row">
+                <div class="button-column">
+                    <a href="{% url 'apply_internship' %}" class="btn-apply">
+                        <span class="btn-title">AI for Business Operations & Leadership Internship</span>
+                        <span class="btn-link">Apply-Here</span>
+                    </a>
+                    <a href="{% url 'apply_internship' %}" class="btn-apply">
+                        <span class="btn-title">AI-Based Social Media & SEO Internship Program</span>
+                        <span class="btn-link">Apply-Here</span>
+                    </a>
+                    <a href="{% url 'apply_internship' %}" class="btn-apply">
+                        <span class="btn-title">"AI Bookkeeping & Financial Analysis Internship"</span>
+                        <span class="btn-link">Apply-Here</span>
+                    </a>
+                    <a href="{% url 'apply_internship' %}" class="btn-apply">
+                        <span class="btn-title">"AI Data Analysis & Business Intelligence Internship"</span>
+                        <span class="btn-link">Apply-Here</span>
+                    </a>
+                </div>
+                <div class="eligibility-card">
+                    <h3>Who Can Apply</h3>
+                    <ul class="program-list">
+                        <li>BBA (General)</li>
+                        <li>BBA +</li>
+                        <li>BBA Digital Marketing</li>
+                        <li>BBA Business Analytics</li>
+                        <li>BBA +</li>
+                        <li>B.Com</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    function reveal() {
+        var reveals = document.querySelectorAll(".reveal");
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var elementTop = reveals[i].getBoundingClientRect().top;
+            if (elementTop < windowHeight - 100) {
+                reveals[i].classList.add("active");
+            }
+        }
+    }
+    window.addEventListener("scroll", reveal);
+    reveal();
+</script>
+{% endblock %}

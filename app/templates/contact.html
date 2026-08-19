@@ -1,0 +1,130 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="hero-section" style="min-height: auto; padding: 120px 0 60px; background: #f8f9fa;">
+    <div class="container text-center">
+        <p class="welcome-text" data-aos="fade-up">GET IN TOUCH</p>
+        <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">Contact <span class="highlight">Us</span></h1>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-7" data-aos="fade-right">
+                <div class="card border-0 shadow-sm p-4 p-md-5 rounded-4">
+                    <h3 class="fw-bold mb-4">Send Us a Message</h3>
+                    <form action="#" method="post">
+                        {% csrf_token %}
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Full Name</label>
+                                <input type="text" class="form-control" placeholder="Your Name" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Email Address</label>
+                                <input type="email" class="form-control" placeholder="Email" required>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Subject</label>
+                                <input type="text" class="form-control" placeholder="Regarding Internship/Course">
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Message</label>
+                                <textarea class="form-control" rows="5" placeholder="How can we help you?"></textarea>
+                            </div>
+                            <div class="col-12 mt-4">
+                                <button type="submit" class="hero-btn border-0 w-100">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-lg-5" data-aos="fade-left">
+                <div class="contact-info-wrapper h-100">
+                    <h3 class="fw-bold mb-4">HAN-INTERN HUB</h3>
+
+                    <div class="d-flex mb-4">
+                        <div class="icon-box blue me-3"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">Our Address</h6>
+                            <p class="text-muted mb-0">
+                                Golden City, Near Vivekananda Park,<br>
+                                Charitable Trust, Patha Bommur,<br>
+                                Rajahmundry – 533124<br>
+                                Andhra Pradesh, India
+                            </p>
+                        </div>
+                    </div>
+                    <!--<div class="mb-4">-->
+                    <!--    <iframe-->
+                    <!--        src="https://www.google.com/maps?q=Golden+City+Vivekananda+Park+Rajahmundry&output=embed"-->
+                    <!--        width="100%"-->
+                    <!--        height="250"-->
+                    <!--        style="border:0; border-radius:10px;"-->
+                    <!--        allowfullscreen=""-->
+                    <!--        loading="lazy">-->
+                    <!--    </iframe>-->
+                    <!--</div>-->
+                    <div class="mt-4">
+                        <div class="card shadow-sm border-0">
+                            <div class="card-body p-0">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3816.173079529768!2d81.8094194749247!3d16.966034683851017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a37a300074e7311%3A0x2aae82f7e199980a!2sSRM%20Golden%20City!5e0!3m2!1sen!2sin!4v1759511805016!5m2!1sen!2sin"
+                                    width="100%"
+                                    height="250"
+                                    style="border:0; border-radius:10px;"
+                                    allowfullscreen=""
+                                    loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade">
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex mb-4">
+                        <div class="icon-box green me-3"><i class="fas fa-phone-alt"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">Phone Numbers</h6>
+                            <p class="text-muted mb-0">
+                                +91 7815942271<br>
+                                +91 8143438243
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex mb-4">
+                        <div class="icon-box red me-3"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">Email Address</h6>
+                            <p class="text-muted mb-0">haninternhub@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex mb-4">
+                        <div class="icon-box purple me-3"><i class="fas fa-clock"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">Working Hours</h6>
+                            <p class="text-muted mb-0">
+                                Monday – Saturday<br>
+                                10:00 AM – 6:00 PM
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mt-5">
+                        <h6 class="fw-bold mb-3">Follow Us</h6>
+                        <div class="d-flex gap-3">
+                            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

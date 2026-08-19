@@ -1,0 +1,117 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+    /* Styling for the Welcome Pill */
+    .welcome-text, .my-special-welcome {
+        display: inline-block;
+        padding: 8px 20px;
+        background: rgba(37, 99, 235, 0.1);
+        color: #2563eb;
+        font-weight: 800;
+        font-size: 25px;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        border-radius: 50px;
+        margin-bottom: 15px;
+    }
+    .hero-main-logo{
+        height:105px;     /* big size */
+        margin-bottom:50px;
+        margin-left: 80px;
+    }
+
+</style>
+
+<section class="hero-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 hero-left" data-aos="fade-right">
+
+
+                <!--<p class="welcome-text">Welcome To HAN INTERN HUB</p>-->
+                <p class="welcome-text">Welcome To HAN INTERN HUB</p>
+                <!--<p class="welcome-text d-flex align-items-center gap-2">-->
+                <!--    Welcome To HAN INTERN HUB-->
+                <!--    <img src="{% static 'images/Logo.jpeg' %}" alt="logo" style="height:35px;">-->
+                <!--</p>-->
+                <!--<img src="{% static 'images/Logo.jpeg' %}" alt="logo" class="hero-main-logo">-->
+
+                <h1 class="hero-title">
+                    Discover Skills <br>
+                    That Build Your <br>
+                    <span class="highlight">Career</span>
+                </h1>
+                <p class="hero-subtext">
+                    Unleash your potential with skills designed to shape and elevate your career.
+                    Explore practical, in-demand knowledge tailored to meet industry standards,
+                    empowering you to achieve professional success and lasting growth.
+                </p>
+                <a href="{% url 'internship_minor' %}" class="hero-btn">Explore Minor Internships</a>
+                <a href="{% url 'internship_major' %}" class="hero-btn">Explore Major Internships</a>
+            </div>
+
+            <div class="col-lg-6 hero-right" data-aos="fade-left">
+                <div class="blob-blue"></div>
+                <div class="blob-orange"></div>
+                <div class="decoration-dots"></div>
+
+                <img src="{% static 'images/internship_girl_img.png' %}"
+                    class="hero-image img-fluid"
+                    alt="Student">
+
+                <div class="floating-card card-1">
+                    <span class="icon-box red"><i class="fas fa-file-alt"></i></span>
+                    Valuable Courses
+                </div>
+                <div class="floating-card card-2">
+                    <span class="icon-box green"><i class="fas fa-graduation-cap"></i></span>
+                    1 Lakh+ Students Enrolled
+                </div>
+                <div class="floating-card card-3">
+                    <span class="icon-box purple"><i class="fas fa-users"></i></span>
+                    Fastest Growing Platform In India
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Internship Categories -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5 fw-bold" data-aos="fade-up">
+            Popular Internship Domains
+        </h2>
+
+        <div class="row g-4">
+
+            <div class="col-md-4" data-aos="zoom-in">
+                <div class="card shadow h-100 text-center p-4">
+                    <h5>Web Development</h5>
+                    <p>Frontend, Backend, Django, React</p>
+                </div>
+            </div>
+
+            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+                <div class="card shadow h-100 text-center p-4">
+                    <h5>Data Science</h5>
+                    <p>Python, Machine Learning, AI</p>
+                </div>
+            </div>
+
+            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="400">
+                <div class="card shadow h-100 text-center p-4">
+                    <h5>Digital Marketing</h5>
+                    <p>SEO, Social Media, Branding</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}

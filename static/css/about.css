@@ -1,0 +1,35 @@
+/* Approach Section Styles */
+.approach-card {
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    position: relative;
+    transition: 0.3s;
+}
+
+.approach-card:hover {
+    transform: translateY(-10px);
+    background: #2563eb;
+    color: white;
+}
+
+.step-num {
+    width: 40px;
+    height: 40px;
+    background: #ff4b2b;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin: 0 auto 15px;
+}
+
+.approach-card:hover .step-num {
+    background: white;
+    color: #2563eb;
+}
+
+

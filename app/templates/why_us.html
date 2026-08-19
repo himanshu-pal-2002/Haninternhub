@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="hero-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 hero-left" data-aos="fade-right">
+
+                <h1 class="hero-title">
+                     WHY HAN-INTERN  <br>
+                     HUB <br>
+                    <!--<span class="highlight">Career</span>-->
+                </h1>
+                <p class="hero-subtext">
+                    At HAN-INTERN HUB, we focus not only on training but also on guiding students towards real career opportunities. Our goal is to support students even after the internship is completed..
+                </p>
+                <a href="{% url 'internship_minor' %}" class="hero-btn">Explore Minor Internships</a>
+                <a href="{% url 'internship_major' %}" class="hero-btn">Explore Major Internships</a>
+            </div>
+
+            <div class="col-lg-6 hero-right" data-aos="fade-left">
+                <div class="blob-blue"></div>
+                <div class="blob-orange"></div>
+                <div class="decoration-dots"></div>
+
+                <img src="{% static 'images/girl_with_laptop.jpeg' %}"
+                    class="hero-image img-fluid"
+                    alt="Student">
+
+                <div class="floating-card card-1">
+                    <span class="icon-box red"><i class="fas fa-file-alt"></i></span>
+                    Valuable Courses
+                </div>
+                <div class="floating-card card-2">
+                    <span class="icon-box green"><i class="fas fa-graduation-cap"></i></span>
+                    1 Lakh+ Students Enrolled
+                </div>
+                <div class="floating-card card-3">
+                    <span class="icon-box purple"><i class="fas fa-users"></i></span>
+                    Fastest Growing Platform In India
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5" style="background: #fdfdfd;">
+    <div class="container">
+        <div class="row g-4">
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card why-card h-100 p-4" style="border: 1px solid #eee; border-radius: 10px;">
+                    <div class="icon-box purple mb-3"><i class="fas fa-robot"></i></div>
+                    <h4 style="font-weight: 800;">1. AI-Focused Practical Training</h4>
+                    <p>All our internship programs are designed around AI applications. Students learn how to use modern AI tools in their own field of study instead of only theoretical concepts.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card why-card h-100 p-4" style="border: 1px solid #eee; border-radius: 10px;">
+                    <div class="icon-box red mb-3"><i class="fas fa-laptop-code"></i></div>
+                    <h4 style="font-weight: 800;">2. Real Project Experience</h4>
+                    <p>Students work on assignments and projects related to business, research, marketing, data analysis, and documentation, which helps them understand actual workplace tasks.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card why-card h-100 p-4" style="border: 1px solid #eee; border-radius: 10px;">
+                    <div class="icon-box green mb-3"><i class="fab fa-whatsapp"></i></div>
+                    <h4 style="font-weight: 800;">3. WhatsApp Job Alerts & Career Updates</h4>
+                    <p>We provide regular WhatsApp alerts to registered students regarding:</p>
+                    <ul class="list-unstyled small-list">
+                        <li><i class="fas fa-check text-success"></i> Job opportunities & Internship openings</li>
+                        <li><i class="fas fa-check text-success"></i> Walk-in interviews & Hiring notifications</li>
+                        <li><i class="fas fa-check text-success"></i> Career guidance & Skill workshops</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card why-card h-100 p-4" style="border: 1px solid #eee; border-radius: 10px;">
+                    <div class="icon-box blue mb-3"><i class="fas fa-file-user"></i></div>
+                    <h4 style="font-weight: 800;">4. Resume & Interview Support</h4>
+                    <p>We assist students in preparing resumes, improving communication skills, and understanding how to attend interviews confidently.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card why-card h-100 p-4" style="border: 1px solid #eee; border-radius: 10px;">
+                    <div class="icon-box orange mb-3"><i class="fas fa-map-signs"></i></div>
+                    <h4 style="font-weight: 800;">5. Career Guidance</h4>
+                    <p>We guide students about career paths after their degree, higher education options, skill requirements for different industries, and freelancing opportunities.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card why-card h-100 p-4" style="border: 1px solid #eee; border-radius: 10px;">
+                    <div class="icon-box purple mb-3"><i class="fas fa-certificate"></i></div>
+                    <h4 style="font-weight: 800;">6. Certification & Recognition</h4>
+                    <p>Students receive verified internship certificates and performance reports which are useful for college submission, placements, and higher studies.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+{% endblock %}
